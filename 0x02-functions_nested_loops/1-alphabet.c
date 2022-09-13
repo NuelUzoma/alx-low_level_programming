@@ -7,6 +7,11 @@
  */
 int main(void)
 {
+	print_alphabet();
+	return (0);
+}
+void print_alphabet(void)
+{
 	int digit;
 
 	for (digit = 97; digit <= 122; digit++)
@@ -14,5 +19,4 @@ int main(void)
 		putchar(digit);
 	}
 	putchar('\n');
-	return (0);
 }
