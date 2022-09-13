@@ -5,5 +5,5 @@
  * Return 0 (Success)
  */
 int _putchar (char);
-
+void print_alphabet(void);
 #endif
