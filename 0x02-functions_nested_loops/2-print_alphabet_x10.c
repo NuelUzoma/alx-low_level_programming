@@ -1,16 +1,8 @@
-#include <stdio.h>
 #include "main.h"
 /**
- * main-Check the code
- * 10 times the alphabet
- * Return: 0 (Success)
+ * print_alphabet_x10-A Function that prints 10x the alphabet
  */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
-}
-void print_alphabet_x10(void)/*This is a prototype function*/
+void print_alphabet_x10(void)
 {
 	int digit, number;
 
@@ -18,8 +10,8 @@ void print_alphabet_x10(void)/*This is a prototype function*/
 	{
 		for (digit = 97; digit <= 122; digit++)
 		{
-			putchar(digit);
+			_putchar(digit);
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
