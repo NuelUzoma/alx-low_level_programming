@@ -5,12 +5,13 @@
 /**
  * print_rev - prints a string in reverse
  * @*s: pointer
+ * @s: variable
  * Return: reverse
  */
 void print_rev(char *s)
 {
 	int len;
-	
+
 	len = strlen(s);
 	while (len--)
 		putchar(*(s + len));
