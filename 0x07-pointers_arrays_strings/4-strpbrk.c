@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _strpbrk - searches a string for any of
@@ -12,16 +11,16 @@ char *_strpbrk(char *s, char *accept)
 {
 	int i;
 
-	while (*s)
+	while (*s != '\0')
 	{
 		for (i = 0; accept[i]; i++)
 		{
-			if (*s == accept[j])
+			if (*s == accept[i])
 			{
 				return (s);
 			}
 		}
 		s++;
 	}
-	return (NULL);
+	return (0);
 }
