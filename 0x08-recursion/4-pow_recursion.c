@@ -1,5 +1,5 @@
-#include "main.h"
 #include <math.h>
+#include "main.h"
 
 /**
  * _pow_recursion - returns the value of an integer
@@ -10,9 +10,12 @@
  */
 int _pow_recursion(int x, int y)
 {
+	int result;
+
+	result = pow(x, y);
 	if (y < 0)
 	{
 		return (-1);
 	}
-	return (pow(x, y));
+	return (result);
 }
