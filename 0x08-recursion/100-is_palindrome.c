@@ -14,15 +14,15 @@ int is_palindrome(char *s)
 	n = strlen(s);
 	l = n - 1;
 	f = 0;
-	if (s[f + 1] != s[l - 1])
+	if (s[f + 4] != s[l - 4])
 	{
 		return (0);
 	}
-	else if (s[f + 1] > s[l - 1])
+	else if (s[f + 4] > s[l - 4])
 	{
 		return (1);
 	}
-	else if (s[f + 1] == s[l - 1])
+	else if (s[f + 4] == s[l - 4])
 	{
 		return (1);
 	}
