@@ -1,26 +1,19 @@
 #include <stdio.h>
-#ifdef UNUSED
-#elif defined(__GNUC__)
-# define(UNUSED(x) UNUSED_ ## x __attribute__((unused)))
-#elif defined(__LCLINT__)
-# define UNUSED(x) /*@unused@*/ x
-#else
-# define UNUSED(x) x
 
-
-void dcc_mon_siginfo_handler(int UNUSED(whatsig));
-
-#endif
 /**
- * main - a program that prints the number
- * of arguments passed to it
+ * main - return the number of arguments
  * @argc: first argument
  * @argv: second argument
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	printf("%d\n", argc);
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		printf("%d\n", argc);
+		argv[i] = 0;
+	}
 	return (0);
 }
-
