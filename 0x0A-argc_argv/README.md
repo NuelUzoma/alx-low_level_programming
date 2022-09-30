@@ -1,0 +1,1 @@
+This repository is all about the projects on main(int argc, int *argv[]) program function calls to check the number of arguments given to the executable file names. This program is given to by ALX and Holberton. This projects has a total number of 4 projects and 1 advanced task.
