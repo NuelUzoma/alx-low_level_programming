@@ -5,7 +5,7 @@
  * main - multiplies two numbers
  * @argc: first argument
  * @argv: second argument
- * Return: 0
+ * Return: 0 if successful else return 1 on error
  */
 int main(int argc, char *argv[])
 {
@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
-		return (1);
 	}
-	return (0);
+	return (1);
 }
