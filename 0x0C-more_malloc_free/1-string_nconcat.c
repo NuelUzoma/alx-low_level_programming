@@ -11,32 +11,36 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *conc;
-	unsigned int i, j, k;
+	unsigned int i, j, k, l;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	for (i = 0; s1[i] != '\0'; i++)
+	for (i = 0; *(s1 + i); i++)
 		;
 
-	for (j = 0; s2[j] != '\0'; j++)
+	for (j = 0; *(s2 + j); j++)
 		;
+
+	if (n < j)
+		j = n;
 
 	conc = malloc(sizeof(char) * (i + j + 1));
 
-	if (conc == NULL)
+	if (conc == 0)
 	{
-		free(conc);
-		return (NULL);
+		return (0);
 	}
 
 	for (k = 0; k < i; k++)
-		conc[k] = s1[k];
+		*(conc + k) = *(s1 + k);
 
-	for (j = 0; j < n; k++, j++)
-		conc[k] = s2[j];
+	for (k = 0, l = i; k < j; l++, k++)
+		*(conc + l) = *(s2 + k);
+
+	*(conc + l) = 0;
 
 	return (conc);
 }
