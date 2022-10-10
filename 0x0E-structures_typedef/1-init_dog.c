@@ -9,10 +9,9 @@
  *
  * Description - Short Description
  */
-void init_dog(struct dog *d, __attribute__((unused)) char *name,
-__attribute__((unused)) float age, __attribute__((unused)) char *owner)
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d->name = "Poppy";
-	d->age = 3.5;
-	d->owner = "Bob";
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }
