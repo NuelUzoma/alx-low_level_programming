@@ -18,14 +18,14 @@ if (!n)
 return;
 }
 va_start(ap, n);
-printf("%d", va_arg(ap, int));
+printf("%d", va_arg(ap, unsigned int));
 if (separator == NULL)
 {
 separator = "";
 }
 for (i = 1; i < n; i++)
 {
-printf("%s%d", separator, va_arg(ap, int));
+printf("%s%d", separator, va_arg(ap, unsigned int));
 }
 va_end(ap);
 printf("\n");
