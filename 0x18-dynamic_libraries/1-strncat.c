@@ -1,0 +1,26 @@
+#include "main.h"
+#include <string.h>
+
+/**
+ * _strncat - concatenates two strings
+ * @dest: pointer variable
+ * @src: pointer variable
+ * @n: integer variable
+ * Return: a pointer to the resulting string
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	int count, i;
+
+	count = 0;
+	while (dest[count] != '\0')
+	{
+		count++;
+	}
+	for (i = 0; i < n && src[i] != '\0'; i++, count++)
+	{
+		dest[count] = src[i];
+	}
+	dest[count] = '\0';
+	return (dest);
+}
